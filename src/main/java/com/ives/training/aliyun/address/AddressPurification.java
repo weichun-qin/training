@@ -19,10 +19,7 @@ import org.springframework.stereotype.Component;
 public class AddressPurification {
 
     public String addressPurification(String address){
-        DefaultProfile profile = DefaultProfile.getProfile(
-                "cn-hangzhou",
-                "LTAI4GEcNf6FV7EEkFm4haGi",
-                "IIsErWZRV4hDbUAU0ey24gzGYPA6SV");
+        DefaultProfile profile = DefaultProfile.getProfile();
         IAcsClient client = new DefaultAcsClient(profile);
         GetAddressDivisionCodeRequest request = new GetAddressDivisionCodeRequest();
         request.setServiceCode("addrp");
